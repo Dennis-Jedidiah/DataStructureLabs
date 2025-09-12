@@ -25,42 +25,80 @@ public class Burrito {
         this.guac = false;
     }
 
-    public void getRice() {
+    public String getRice() {
+        if (this.rice == "none") {
+            return("no rice");
+        } else {
+            return(this.rice);
+            
+        }
     }
 
-    public void getSize() {
+    public String getSize() {
+        if (this.size == "none") {
+            return("small");
+        } else {
+            return(this.size);
+        }
+    }
+    
+    public String getProtein() {
+        if (this.protein == "none") {
+            return("no protein");
+        } else {
+            return(this.protein);
+        }
     }
 
-    public void getProtein() {
+    public String getBeans() {
+        if (this.beans == "none") {
+            return("no beans");
+        } else {
+            return(this.beans);
+        }
     }
 
-    public void getBeans() {
+    public String getToppings() {
+        if (this.toppings == "none") {
+            return("no toppings");
+        } else {
+            return(this.toppings);
+        }
     }
 
-    public void getToppings() {
+    public String getGuac() {
+        if (this.guac == false) {
+            return("no guacamole");
+        } else {
+            return("guacamole");
+        }
     }
 
-    public void getGuac() {
+    public void setRice(String rice) {
+        this.rice = rice;
     }
 
-    public void setRice() {
+    public void setSize(String size) {
+        this.size = size;
     }
 
-    public void setSize() {
+    public void setProtein(String protein) {
+        this.protein = protein;
     }
 
-    public void setProtein() {
+    public void setBeans(String beans) {
+        this.beans = beans;
     }
 
-    public void setBeans() {
+    public void setToppings(String toppings) {
+        this.toppings = toppings;
     }
 
-    public void setToppings() {
-    }
-
-    public void setGuac() {
+    public void setGuac(Boolean guac) {
+        this.guac = guac;
     }
     public String toString(){
-        return "hold";
+        return size + protein + " burrito with " + rice + ", " + beans + ", "
+                + toppings + ", and" + guac + ".";
     }
 }
