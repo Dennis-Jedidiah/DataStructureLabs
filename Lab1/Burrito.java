@@ -24,6 +24,14 @@ public class Burrito {
         this.toppings = "none";
         this.guac = false;
     }
+    public Burrito(String size, String protein, String rice, String beans, String toppings, Boolean guac) {
+        this.size = size;
+        this.protein = protein;
+        this.rice = rice;
+        this.beans = beans;
+        this.toppings = toppings;
+        this.guac = guac;
+    }
 
     public String getRice() {
         if (this.rice == "none") {
