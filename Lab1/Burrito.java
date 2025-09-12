@@ -1,45 +1,66 @@
 public class Burrito {
 
-    String size;
-    String protein;
-    String rice;
-    String beans;
-    String toppings;
-    Boolean guac;
+    String size = "";
+    String protein = "";
+    String rice = "";
+    String beans = "";
+    String toppings = "";
+    Boolean guac = false;
 
     public Burrito() {
-        size = "small";
-        protein = "no";
-        rice = "no";
-        beans = "no";
-        toppings = "no";
-        guac = false;
+        this.size = "small";
+        this.protein = "none";
+        this.rice = "none";
+        this.beans = "none";
+        this.toppings = "none";
+        this.guac = false;
     }
 
     public Burrito(String size, String protein) {
         this.size = size;
         this.protein = protein;
-        this.rice = "no";
-        this.beans = "no";
-        this.toppings = "no";
+        this.rice = "none";
+        this.beans = "none";
+        this.toppings = "none";
         this.guac = false;
     }
 
-    Burrito(String size, String protein, String rice,
-            String beans, String toppings, boolean guac) {
-        this.size = size;
-        this.protein = protein;
-        this.rice = rice;
-        this.beans = beans;
-        this.toppings = toppings;
-        this.guac = guac;
+    public void getRice() {
     }
 
-    public String toString() {
-        // size + protein + " Burrito with " + beans + " beans " + toppings +
-        return this.size + this.protein + " Burrito with " + this.rice
-                + this.beans + this.toppings + this.guac;
-
+    public void getSize() {
     }
 
+    public void getProtein() {
+    }
+
+    public void getBeans() {
+    }
+
+    public void getToppings() {
+    }
+
+    public void getGuac() {
+    }
+
+    public void setRice() {
+    }
+
+    public void setSize() {
+    }
+
+    public void setProtein() {
+    }
+
+    public void setBeans() {
+    }
+
+    public void setToppings() {
+    }
+
+    public void setGuac() {
+    }
+    public String toString(){
+        return "hold";
+    }
 }
