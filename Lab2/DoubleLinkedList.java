@@ -1,6 +1,6 @@
-public class DoubleLinkedList {
-    private Node head;
-    private Node tail;
+public class DoubleLinkedList<E> {
+    private Node<E> head;
+    private Node<E> tail;
     private int size;
 
     // Constructor
@@ -11,11 +11,11 @@ public class DoubleLinkedList {
     }
 
     // Getters
-    public Node getHead() {
+    public Node<E> getHead() {
         return head;
     }
 
-    public Node getTail() {
+    public Node<E> getTail() {
         return tail;
     }
 
@@ -24,26 +24,26 @@ public class DoubleLinkedList {
     }
 
     // Setters
-    public void setHead(Node head) {
+    public void setHead(Node<E> head) {
         if (size == 0) {
             this.head = head;
             this.tail = head;
             size++;
         } else {
-            Node oldhead = this.head;
+            Node<E> oldhead = this.head;
             this.head = head;
             this.head.setNext(oldhead);
             size++;
         }
     }
 
-    public void setTail(Node tail) {
+    public void setTail(Node<E> tail) {
         if (size == 0) {
             this.tail = tail;
             this.head = tail;
             size++;
         } else {
-            Node oldTail = this.tail;
+            Node<E> oldTail = this.tail;
             this.tail = tail;
             this.tail.setPrev(oldTail);
             size++;
@@ -55,8 +55,8 @@ public class DoubleLinkedList {
     }
 
     // Other Methods
-    public void addToFront(int value) {
-        Node newNode = new Node(value);
+    public void addToFront(E value) {
+        Node<E> newNode = new Node<E>(value);
         setHead(newNode);
     }
 
@@ -68,14 +68,14 @@ public class DoubleLinkedList {
             this.tail = null;
             size--;
         } else {
-            Node newHead = this.head.getNext();
+            Node<E> newHead = this.head.getNext();
             this.head = newHead;
             size--;
         }
     }
 
-    public void addToEnd(int value) {
-        Node newNode = new Node(value);
+    public void addToEnd(E value) {
+        Node<E> newNode = new Node<E>(value);
         setTail(newNode);
     }
 
@@ -87,7 +87,7 @@ public class DoubleLinkedList {
             this.tail = null;
             size--;
         } else {
-            Node newTail = this.tail.getPrev();
+            Node<E> newTail = this.tail.getPrev();
             this.tail = newTail;
             size--;
         }
@@ -95,12 +95,12 @@ public class DoubleLinkedList {
 
     public String toString() {
         String returnString = "[ ";
-        Node startingPoint = this.head;
+        Node<E> startingPoint = this.head;
         for (int i = 0; i < this.size; i++) {
             returnString += startingPoint.getData() + " ";
             startingPoint = startingPoint.getNext();
         }
         returnString += "]";
-        return returnString;
+        return returnString;    
     }
 }
