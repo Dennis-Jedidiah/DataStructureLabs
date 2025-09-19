@@ -3,6 +3,6 @@ public class ListTest {
         DoubleLinkedList list = new DoubleLinkedList();
 
         // For now, you can just print size
-        System.out.println("List created. Size = " + list.getSize());
+        System.out.println("List created. Size = " + list.getLength());
     }
 }
