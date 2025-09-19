@@ -25,12 +25,13 @@ public class DoubleLinkedList<E> {
 
     // Setters
     public void setHead(Node<E> head) {
-        if (size == 0) {
+        if (this.size == 0) {
             this.head = head;
             this.tail = head;
             size++;
         } else {
             Node<E> oldhead = this.head;
+            oldhead.setPrev(head);
             this.head = head;
             this.head.setNext(oldhead);
             size++;
@@ -44,6 +45,7 @@ public class DoubleLinkedList<E> {
             size++;
         } else {
             Node<E> oldTail = this.tail;
+            oldTail.setNext(tail);
             this.tail = tail;
             this.tail.setPrev(oldTail);
             size++;
